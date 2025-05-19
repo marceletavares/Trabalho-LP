@@ -1,0 +1,24 @@
+{
+  "name": "trabalho-lp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marceletavares/Trabalho-LP.git"
+  },
+  "author": "Marcele e Milene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marceletavares/Trabalho-LP/issues"
+  },
+  "homepage": "https://github.com/marceletavares/Trabalho-LP#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

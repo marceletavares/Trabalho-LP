@@ -14,9 +14,9 @@ body {
 
 a {
     text-decoration: none;
-    color: #ffffff;
+    color: #505050;
     width: 30rem;
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
     text-align: center;
     font-size: 1.1rem;
     transition: 0.4s;
@@ -24,11 +24,10 @@ a {
 
 a:hover {
     color: #a9a9a9;
-    font-size: 1.2rem;
 }
 
 #menu {
-    background-color: #a98cad;
+    background-color: rgb(225, 225, 225);
     height: 30rem;
     width: 30rem;
     display: flex;
@@ -36,7 +35,7 @@ a:hover {
     align-items: center;
     justify-content: space-evenly;
     border-radius: 1.2rem;
-    border: 15px solid #ffffff;
+    border: 10px solid #ffffff;
 }
 
 main {
@@ -49,7 +48,7 @@ h2 {
     font-weight: 600;
     color: #ffffff;
     background-color: #cacaca;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2.5rem;
     border-radius: 1rem;
 }
 

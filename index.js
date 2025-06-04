@@ -1,8 +1,7 @@
-import session from 'express-session'
+import express from "express";
+import session from "express-session"
 import verificarAutenticacao from "./seguranca/autenticacao.js";
-import express from 'express';
 
-const host = "0.0.0.0";
 const porta = 3000;
 const app = express(); 
 
@@ -20,9 +19,9 @@ app.use(express.urlencoded({extended: true}));
 
 app.use(express.static("publico")); 
 
-app.post("/cadastrar", (requisicao, resposta) =>  {
-    const {usuario, senha} = requisicao.body;
-    if (usuario === "admin" && senha === "admin") 
+app.post("/login", (requisicao, resposta) =>  {
+    const {nomeusuario, senha} = requisicao.body;
+    if (nomeusuario == "admin" && senha == "admin") 
     {
         requisicao.session.autenticado = true;
         resposta.redirect("/menu.html");
@@ -51,7 +50,7 @@ app.use(verificarAutenticacao, express.static("privado"));
 
 app.get("/logout", (requisicao, resposta) => {
     requisicao.session.destroy(); 
-    resposta.redirect("/login.html"); 
+    resposta.redirect("/index.html"); 
     resposta.end();
 });
 

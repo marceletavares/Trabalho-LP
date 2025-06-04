@@ -1,8 +1,6 @@
-export default function verificarAutenticacao(requisicao,resposta,next){
-    if (requisicao.session.autenticado){
+export default function verificarAutenticacao (requisicao, resposta, next) {
+    if (requisicao.session.autenticado)
         next();
-    }
-    else{
+    else
         resposta.redirect("/login.html");
-    }
 }

@@ -14,31 +14,32 @@
         <div class="content first-content">
             <div class="first-column">
                 <h2 class="title title-primary">Bem Vindo!</h2>
-                <a href="/login.html"><button id="signin" class="btn btn-primary">Login</button></a>
+                <a href="/login"><button id="signin" class="btn btn-primary">Login</button></a>
             </div>    
             <div class="second-column">
                 <h2 class="title title-second">Criar Conta</h2>
-                <form class="form">
+                <form class="form" id="formcadusuarios">
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Nome">
+                        <input type="text" placeholder="Nome" id="nomeusuario">
                     </label>
                     
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="text" placeholder="Email" id="email">
                     </label>
                     
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Senha">
+                        <input type="password" placeholder="Senha" id="senha">
                     </label>
                     
                     
-                    <button class="btn btn-second">Cadastrar</button>        
+                    <button type="submit" class="btn btn-second">Cadastrar</button>        
                 </form>
             </div>
         </div>
     </div>
 </body>
+<script src="/js/cadastro.js"></script>
 </html>

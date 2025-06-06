@@ -6,7 +6,7 @@
       "nome": "João Carlos Gouveia",
       "telefone": "(18)9111-1111",
       "cidade": "Presidente Prudente",
-      "uf": "SP",
+      "estado": "SP",
       "cep": "19015-010"
     },
     {
@@ -15,7 +15,7 @@
       "nome": "Odete Roitman",
       "telefone": "(18)9222-2222",
       "cidade": "Londrina",
-      "uf": "PR",
+      "estado": "PR",
       "cep": "14023-013"
     },
     {
@@ -24,7 +24,7 @@
       "nome": "Sandra Regina Vasconcelos",
       "telefone": "(11)9333-3333",
       "cidade": "São Paulo",
-      "uf": "SP",
+      "estado": "SP",
       "cep": "11033-029"
     },
     {
@@ -33,7 +33,7 @@
       "nome": "Jason Grace",
       "telefone": "(17)9444-4444",
       "cidade": "Três Lagoas",
-      "uf": "MS",
+      "estado": "MS",
       "cep": "21035-070"
     }
   ],
@@ -41,5 +41,12 @@
   "fornecedores": [],
   "entregadores": [],
   "categorias": [],
-  "usuarios": []
+  "usuarios": [
+    {
+      "id": "1720",
+      "nomeusuario": "admin",
+      "email": "admin@gmail.com",
+      "senha": "admin"
+    }
+  ]
 }

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: Poppins;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+
+form {
+    background-color: rgb(225, 225, 225);
+    height: 30rem;
+    width: 89rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: #505050;
+    background-color: #ecf0f1;
+    padding: 0.6rem 30rem;
+    border-radius: 0.4rem;
+}
+
+label {
+    color: #505050;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+
+#divinputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#inputdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+#sectioninp {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+input {
+    border-radius: 0.7rem;
+    padding: 0.5rem 2rem;
+    border: 2px solid #a98cad;
+}
+
+button {
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid #a98cad;
+    color: #303030;
+    font-size: 0.9rem;
+}
+
+a {
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid #a98cad;
+    color: #303030;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #a98cad;
+}
+
+button:hover {
+    background-color: #a98cad;
+}
+
+#divbuttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+}
+
+#exclusaobutton {
+    margin: 1.1rem;
+    padding: 0.7rem 2rem;
+}
+
+td {
+    text-align: center;
+    padding: 0.2rem 2.3rem;
+}
+
+th {
+    font-weight: 600;
+}

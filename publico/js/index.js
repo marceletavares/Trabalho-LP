@@ -8,7 +8,8 @@ function carregarProdutos(){
     }).then((listaDeProdutos) => {
         const divVitrine = document.getElementById("vitrine");
         for (const produto of listaDeProdutos){
-            const precoFormatado = (produto.preco !== undefined && !isNaN(produto.preco)) ? produto.preco.toFixed(2) : "0.00";
+            const precoNumerico = Number(produto.preco);
+            const precoFormatado = !isNaN(precoNumerico) ? precoNumerico.toFixed(2) : "0.00";
 
             let card = document.createElement('div');
             card.innerHTML = `

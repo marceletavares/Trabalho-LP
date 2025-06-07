@@ -8,15 +8,20 @@
     <title>Login</title>
 </head>
 <body>
+    <header class="cabecalho">
+        <nav>
+            <a href="/index.html"><h1 class="menu">Menu</h1></a>
+        </nav>
+    </header>
     <main class="container">
         <form method="POST" action="/login">
             <h1>Login</h1>
             <div class="input-box ib1">
-                <input placeholder="Usuário" type="text" name="nomeusuario">
+                <input placeholder="Usuário" type="text" name="nomeusuario" required>
                 <i class="bx bxs-user"></i>
             </div>
             <div class="input-box ib2">
-                <input placeholder="Senha" type="password" id="input2" name="senha">
+                <input placeholder="Senha" type="password" id="input2" name="senha" required>
                 <i class="bx bxs-lock-alt"></i>
             </div>
 

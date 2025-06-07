@@ -8,10 +8,11 @@ function manipularSubmissao (evento) {
         const nome = document.getElementById("nome").value;
         const cpf = document.getElementById("cpf").value;
         const telefone = document.getElementById("telefone").value;
+        const email = document.getElementById("email").value;
         const cidade = document.getElementById("cidade").value;
         const estado = document.getElementById("estado").value;
         const cep = document.getElementById("cep").value;
-        const cliente = {nome, cpf, telefone, cidade, estado, cep};
+        const cliente = {nome, cpf, telefone, email, cidade, estado, cep};
         postCliente(cliente);
         form.reset();
         exibirTabela();
@@ -40,6 +41,7 @@ function exibirTabela () {
                 <th style="border: 1px solid black">Nome</th>
                 <th style="border: 1px solid black">CPF</th>
                 <th style="border: 1px solid black">Telefone</th>
+                <th style="border: 1px solid black">E-mail</th>
                 <th style="border: 1px solid black">Cidade</th>
                 <th style="border: 1px solid black">Estado</th>
                 <th style="border: 1px solid black">CEP</th>
@@ -53,6 +55,7 @@ function exibirTabela () {
                 <td style="border: 1px solid black">${listaClientes[i].nome}</td>
                 <td style="border: 1px solid black">${listaClientes[i].cpf}</td>
                 <td style="border: 1px solid black">${listaClientes[i].telefone}</td>
+                <td style="border: 1px solid black">${listaClientes[i].email}</td>
                 <td style="border: 1px solid black">${listaClientes[i].cidade}</td>
                 <td style="border: 1px solid black">${listaClientes[i].estado}</td>
                 <td style="border: 1px solid black">${listaClientes[i].cep}</td>

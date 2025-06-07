@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: Poppins;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 20px;
+    background-color: #222;
+}
+
+.botaologincadastro {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 3px solid #a98cad;
+    border-radius: 5px;
+    color: #222;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botaologincadastro:hover {
+    background-color: #a98cad;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#tabela {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .produto-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd;
+    background-color: #fff;
+  }
+  
+  .produto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }

@@ -1,4 +1,4 @@
-var dados = {
+{
   "clientes": [
     {
       "id": "1",

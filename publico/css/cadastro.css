@@ -215,3 +215,45 @@ input:-webkit-autofill
     position: relative;
     animation: deslocamentoEsq 1.3s; 
 }
+
+.register-link a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.register-link a:hover{
+    text-decoration: underline;
+}
+
+.menu {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu:hover {
+    text-decoration: underline;
+    color: #ccc;
+}
+
+.cabecalho {
+    position: fixed;
+    top: 20px;
+    left: 30px;
+}
+
+.menu {
+    font-size: 24px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu:hover {
+    text-decoration: underline;
+    color: #ccc;
+}

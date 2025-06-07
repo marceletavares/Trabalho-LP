@@ -117,3 +117,35 @@ form {
 .register-link a:hover{
     text-decoration: underline;
 }
+
+.menu {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu:hover {
+    text-decoration: underline;
+    color: #ccc;
+}
+
+.cabecalho {
+    position: fixed;
+    top: 20px;
+    left: 30px;
+}
+
+.menu {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu:hover {
+    text-decoration: underline;
+    color: #ccc;
+}

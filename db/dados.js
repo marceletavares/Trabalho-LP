@@ -37,16 +37,107 @@
       "cep": "21035-070"
     }
   ],
-  "produtos": [],
-  "fornecedores": [],
-  "entregadores": [],
-  "categorias": [],
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Camiseta Polo Masculina",
+      "preco": 79.90,
+      "estoque": 120,
+      "categoria_id": "1",
+      "fornecedor_id": "1"
+    }
+    {
+      "id": "2",
+      "nome": "Notebook Lenovo Ideapad 3",
+      "preco": 2999.00,
+      "estoque": 30,
+      "categoria_id": "2",
+      "fornecedor_id": "2"
+    },
+    {
+      "id": "3",
+      "nome": "Cafeteira Elétrica Arno",
+      "preco": 199.90,
+      "estoque": 55,
+      "categoria_id": "3",
+      "fornecedor_id": "3"
+    }
+  ],
+  "fornecedores": [
+    {
+      "id": "1",
+      "nome": "Malharia São Jorge",
+      "cnpj": "12.345.678/0001-90",
+      "telefone": "(11)4002-8922",
+      "cidade": "São Paulo",
+      "estado": "SP"
+    },
+    {
+      "id": "2",
+      "nome": "InfoTech Distribuidora",
+      "cnpj": "98.765.432/0001-10",
+      "telefone": "(41)99888-7766",
+      "cidade": "Curitiba",
+      "estado": "PR"
+    },
+    {
+      "id": "3",
+      "nome": "EletroHouse Ltda",
+      "cnpj": "56.789.123/0001-55",
+      "telefone": "(21)97777-1234",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ"
+    }
+  ],
+  "entregadores": [
+    {
+      "id": "1",
+      "nome": "Carlos Alberto da Silva",
+      "cpf": "555.555.555-55",
+      "telefone": "(18)9555-5555",
+      "veiculo": "Moto"
+    },
+    {
+      "id": "2",
+      "nome": "Mariana Ferreira Souza",
+      "cpf": "666.666.666-66",
+      "telefone": "(11)9666-6666",
+      "veiculo": "Carro"
+    },
+    {
+      "id": "3",
+      "nome": "Ricardo Oliveira",
+      "cpf": "777.777.777-77",
+      "telefone": "(17)9777-7777",
+      "veiculo": "Van"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "1",
+      "nome": "Roupas"
+    },
+    {
+      "id": "2",
+      "nome": "Informática"
+    },
+    {
+      "id": "3",
+      "nome": "Eletrodomésticos"
+    }
+  ],
   "usuarios": [
     {
       "id": "1720",
       "nomeusuario": "admin",
       "email": "admin@gmail.com",
       "senha": "admin"
+    },
+    {
+      "id": "3f9c",
+      "nomeusuario": "Milene",
+      "email": "milenidionisio3@gmail.com",
+      "senha": "123"
     }
   ]
 }

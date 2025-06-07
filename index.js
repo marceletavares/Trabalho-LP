@@ -40,7 +40,6 @@ function getUsuarios () {
 app.get("/login", (requisicao, resposta) => {
     getUsuarios();
     resposta.redirect("/login.html"); 
-    resposta.end();
 });
 
 app.post("/login", (requisicao, resposta) =>  {

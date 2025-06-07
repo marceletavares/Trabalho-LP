@@ -50,11 +50,10 @@ function exibirTabela () {
                 <td style="border: 1px solid black">${listaCategorias[i].descricao}</td>
                 <td style="border: 1px solid black">${listaCategorias[i].faixaEtaria}</td>
                 <td style="border: 1px solid black">${listaCategorias[i].departamento}</td>
-                <td style="border: 1px solid black"><button id="exclusaobutton" onclick="deleteCliente('${listaCategorias[i].id}')">Excluir</button></td>
+                <td style="border: 1px solid black"><button id="exclusaobutton" onclick="deleteCategoria('${listaCategorias[i].id}')">Excluir</button></td>
             `;
             tbody.appendChild(tr);
         }
-        
         table.style.border="1px solid black";
         table.style.borderCollapse="collapse";
         table.style.marginTop="3rem";

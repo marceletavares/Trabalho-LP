@@ -13,7 +13,7 @@ function carregarProdutos(){
             let card = document.createElement('div');
             card.innerHTML = `
                 <div class="card" style="width: 18rem; border: 1px solid #ccc; padding: 1rem; border-radius: 8px;">
-                    <img width="150px" height="250px" src="${produto.linkimagem}" class="card-img-top" alt="${produto.nome}">
+                    <img width="150px" height="250px" src="${produto.linkImagem}" class="card-img-top" alt="${produto.nome}">
                     <div class="card-body">
                         <h5 class="card-title">${produto.nome}</h5>
                         <p class="card-text">R$ ${precoFormatado}</p>

@@ -12,7 +12,7 @@ function manipularSubmissao (evento) {
         const categoria = document.getElementById("categoria").value;
         const fornecedor = document.getElementById("fornecedor").value;
         const produto = {nome, preco, estoque, linkImagem, categoria, fornecedor};
-        postProdutos(produto);
+        postProduto(produto);
         form.reset();
         exibirTabela();
     }
@@ -55,7 +55,7 @@ function exibirTabela () {
                 <td style="border: 1px solid black">${listaProdutos[i].linkImagem}</td>
                 <td style="border: 1px solid black">${listaProdutos[i].categoria}</td>
                 <td style="border: 1px solid black">${listaProdutos[i].fornecedor}</td>
-                <td style="border: 1px solid black"><button id="exclusaobutton" onclick="deleteProdutos('${listaProdutos[i].id}')">Excluir</button></td>
+                <td style="border: 1px solid black"><button id="exclusaobutton" onclick="deleteProduto('${listaProdutos[i].id}')">Excluir</button></td>
             `;
             tbody.appendChild(tr);
         }
@@ -97,7 +97,7 @@ function postProduto (produtos) {
     })
     .then((dados) => {
         alert(`Produtos cadastrado com sucesso. ID do produtos: ${dados.id}`);
-        produto.id = dados.id;
+        produtos.id = dados.id;
         listaProdutos.push(produtos);
         exibirTabela();
     })

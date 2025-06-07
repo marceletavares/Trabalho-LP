@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/clientes.css">
-    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="/css/cadastros.css">
+    <title>Cadastro de Categoria</title>
 </head>
 <body>
-    <form id="formcadclientes" action="#" method="POST">
-        <h1>Cadastro de Clientes</h1>
+    <form id="formcadcategorias" action="#" method="POST">
+        <h1>Cadastro de Categoria</h1>
         <div id="divinputs">
             <section id="sectioninp">
                 <div id="inputdiv">
@@ -16,26 +16,18 @@
                     <input type="text" id="nome" required>
                 </div>
                 <div id="inputdiv">
-                    <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" required>
-                </div>
-                <div id="inputdiv">
-                    <label for="telefone">Telefone:</label>
-                    <input type="text" id="telefone" required>
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" id="descricao" required>
                 </div>
             </section>
             <section id="sectioninp">
                 <div id="inputdiv">
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" required>
+                    <label for="faixaEtaria">Faixa Etaria:</label>
+                    <input type="text" id="faixaEtaria" required>
                 </div>
                 <div id="inputdiv">
-                    <label for="estado">Estado:</label>
-                    <input type="text" id="estado" required>
-                </div>
-                <div id="inputdiv">
-                    <label for="cep">CEP:</label>
-                    <input type="text" id="cep" required>
+                    <label for="departamento">Departamento:</label>
+                    <input type="text" id="departamento" required>
                 </div>
             </section>
         </div>
@@ -46,5 +38,5 @@
     </form>
     <div id="tabela"></div>
 </body>
-<script src="/js/clientes.js"></script>
+<script src="/js/categorias.js"></script>
 </html>

@@ -1,18 +1,16 @@
-const urlBase = "http://localhost:4000/clientes";
-const form = document.getElementById("formcadclientes");
+const urlBase = "http://localhost:4000/categorias";
+const form = document.getElementById("formcadcategorias");
 form.onsubmit = manipularSubmissao;
-let listaClientes = [];
+let listaCategorias = [];
 
 function manipularSubmissao (evento) {
     if (form.checkValidity()) {
         const nome = document.getElementById("nome").value;
-        const cpf = document.getElementById("cpf").value;
-        const telefone = document.getElementById("telefone").value;
-        const cidade = document.getElementById("cidade").value;
-        const estado = document.getElementById("estado").value;
-        const cep = document.getElementById("cep").value;
-        const cliente = {nome, cpf, telefone, cidade, estado, cep};
-        postCliente(cliente);
+        const descricao = document.getElementById("descricao").value;
+        const faixaEtaria = document.getElementById("faixaEtaria").value;
+        const departamento = document.getElementById("departamento").value;
+        const categoria = {nome, descricao, faixaEtaria, departamento};
+        postCategoria(categoria);
         form.reset();
         exibirTabela();
     }
@@ -24,8 +22,8 @@ function exibirTabela () {
     const divt = document.getElementById("tabela");
     divt.innerHTML = "";
 
-    if (listaClientes.length == 0)
-        divt.innerHTML = "<p>Não há clientes cadastrados.</p>";
+    if (listaCategorias.length == 0)
+        divt.innerHTML = "<p>Não há categorias cadastrados.</p>";
     else {
         const table = document.createElement("table");
         const thead = document.createElement("thead");
@@ -38,25 +36,21 @@ function exibirTabela () {
         thead.innerHTML = `
             <tr>
                 <th style="border: 1px solid black">Nome</th>
-                <th style="border: 1px solid black">CPF</th>
-                <th style="border: 1px solid black">Telefone</th>
-                <th style="border: 1px solid black">Cidade</th>
-                <th style="border: 1px solid black">Estado</th>
-                <th style="border: 1px solid black">CEP</th>
+                <th style="border: 1px solid black">Descricao</th>
+                <th style="border: 1px solid black">Faixa Etaria</th>
+                <th style="border: 1px solid black">Departamento</th>
             </tr>
         `;
 
-        for (let i = 0; i < listaClientes.length; i++) {
+        for (let i = 0; i < listaCategorias.length; i++) {
             const tr = document.createElement("tr");
-            tr.id = listaClientes[i].id;
+            tr.id = listaCategorias[i].id;
             tr.innerHTML = `
-                <td style="border: 1px solid black">${listaClientes[i].nome}</td>
-                <td style="border: 1px solid black">${listaClientes[i].cpf}</td>
-                <td style="border: 1px solid black">${listaClientes[i].telefone}</td>
-                <td style="border: 1px solid black">${listaClientes[i].cidade}</td>
-                <td style="border: 1px solid black">${listaClientes[i].estado}</td>
-                <td style="border: 1px solid black">${listaClientes[i].cep}</td>
-                <td style="border: 1px solid black"><button id="exclusaobutton" onclick="deleteCliente('${listaClientes[i].id}')">Excluir</button></td>
+                <td style="border: 1px solid black">${listaCategorias[i].nome}</td>
+                <td style="border: 1px solid black">${listaCategorias[i].descricao}</td>
+                <td style="border: 1px solid black">${listaCategorias[i].faixaEtaria}</td>
+                <td style="border: 1px solid black">${listaCategorias[i].departamento}</td>
+                <td style="border: 1px solid black"><button id="exclusaobutton" onclick="deleteCliente('${listaCategorias[i].id}')">Excluir</button></td>
             `;
             tbody.appendChild(tr);
         }
@@ -67,7 +61,7 @@ function exibirTabela () {
     }
 }
 
-function getClientes () {
+function getCategorias () {
     fetch(urlBase, {
         method: "GET"
     })
@@ -75,39 +69,39 @@ function getClientes () {
         if (resposta.ok)
             return resposta.json();
     })
-    .then((clientes) => {
-        listaClientes = clientes;
+    .then((categorias) => {
+        listaCategorias = categorias;
         exibirTabela();
     })
     .catch((erro) => {
-        alert("Erro ao tentar recuperar clientes do servidor.");
+        alert("Erro ao tentar recuperar categorias do servidor.");
     });
 }
 
-function postCliente (cliente) {
+function postCategoria (categoria) {
     fetch(urlBase, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(cliente)
+        body: JSON.stringify(categoria)
     })
     .then((resposta) => {
         if (resposta.ok)
             return resposta.json();
     })
     .then((dados) => {
-        alert(`Cliente cadastrado com sucesso. ID do cliente: ${dados.id}`);
-        listaClientes.push(cliente);
+        alert(`Categoria cadastrada com sucesso. ID da categoria: ${dados.id}`);
+        listaCategorias.push(categoria);
         exibirTabela();
     })
     .catch((erro) => {
-        alert("Erro ao cadastrar cliente: " + erro);
+        alert("Erro ao cadastrar categoria: " + erro);
     });
 }
 
-function deleteCliente (id) {
-    if (confirm("Deseja realmente excluir o cliente " + id + "?")) {
+function deleteCategoria (id) {
+    if (confirm("Deseja realmente excluir a categoria " + id + "?")) {
         fetch(urlBase + "/" + id, {
             method: "DELETE"
         })
@@ -116,16 +110,16 @@ function deleteCliente (id) {
                 return resposta.json();
         })
         .then((dados) => {
-            alert("Cliente excluído com sucesso.");
-            listaClientes = listaClientes.filter((cliente) => {
-                return cliente.id != id;
+            alert("Categoria excluído com sucesso.");
+            listaCategorias = listaCategorias.filter((categoria) => {
+                return categoria.id != id;
             });
             document.getElementById(id)?.remove();
         })
         .catch((erro) => {
-            alert("Erro ao excluir cliente: " + erro);
+            alert("Erro ao excluir categoria: " + erro);
         });
     }
 }
 
-getClientes();
+getCategorias();

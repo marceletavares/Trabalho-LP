@@ -1,18 +1,18 @@
-const urlBase = "http://localhost:4000/clientes";
-const form = document.getElementById("formcadclientes");
+const urlBase = "http://localhost:4000/produtos";
+const form = document.getElementById("formcadprodutos");
 form.onsubmit = manipularSubmissao;
-let listaClientes = [];
+let listaProdutos = [];
 
 function manipularSubmissao (evento) {
     if (form.checkValidity()) {
         const nome = document.getElementById("nome").value;
-        const cpf = document.getElementById("cpf").value;
-        const telefone = document.getElementById("telefone").value;
-        const cidade = document.getElementById("cidade").value;
-        const estado = document.getElementById("estado").value;
-        const cep = document.getElementById("cep").value;
-        const cliente = {nome, cpf, telefone, cidade, estado, cep};
-        postCliente(cliente);
+        const preco = document.getElementById("preco").value;
+        const estoque = document.getElementById("estoque").value;
+        const linkimagem = document.getElementById("linkimagem").value;
+        const categoria = document.getElementById("categoria").value;
+        const fornecedor = document.getElementById("fornecedor").value;
+        const produto = {nome, preco, estoque, linkimagem, categoria, fornecedor};
+        postProdutos(produto);
         form.reset();
         exibirTabela();
     }
@@ -24,8 +24,8 @@ function exibirTabela () {
     const divt = document.getElementById("tabela");
     divt.innerHTML = "";
 
-    if (listaClientes.length == 0)
-        divt.innerHTML = "<p>Não há clientes cadastrados.</p>";
+    if (listaProdutos.length == 0)
+        divt.innerHTML = "<p>Não há produtos cadastrados.</p>";
     else {
         const table = document.createElement("table");
         const thead = document.createElement("thead");
@@ -38,25 +38,25 @@ function exibirTabela () {
         thead.innerHTML = `
             <tr>
                 <th style="border: 1px solid black">Nome</th>
-                <th style="border: 1px solid black">CPF</th>
-                <th style="border: 1px solid black">Telefone</th>
-                <th style="border: 1px solid black">Cidade</th>
-                <th style="border: 1px solid black">Estado</th>
-                <th style="border: 1px solid black">CEP</th>
+                <th style="border: 1px solid black">Preço</th>
+                <th style="border: 1px solid black">Estoque</th>
+                <th style="border: 1px solid black">Link Imagem</th>
+                <th style="border: 1px solid black">Categoria</th>
+                <th style="border: 1px solid black">Fornecedor</th>
             </tr>
         `;
 
-        for (let i = 0; i < listaClientes.length; i++) {
+        for (let i = 0; i < listaProdutos.length; i++) {
             const tr = document.createElement("tr");
-            tr.id = listaClientes[i].id;
+            tr.id = listaProdutos[i].id;
             tr.innerHTML = `
-                <td style="border: 1px solid black">${listaClientes[i].nome}</td>
-                <td style="border: 1px solid black">${listaClientes[i].cpf}</td>
-                <td style="border: 1px solid black">${listaClientes[i].telefone}</td>
-                <td style="border: 1px solid black">${listaClientes[i].cidade}</td>
-                <td style="border: 1px solid black">${listaClientes[i].estado}</td>
-                <td style="border: 1px solid black">${listaClientes[i].cep}</td>
-                <td style="border: 1px solid black"><button id="exclusaobutton" onclick="deleteCliente('${listaClientes[i].id}')">Excluir</button></td>
+                <td style="border: 1px solid black">${listaProdutos[i].nome}</td>
+                <td style="border: 1px solid black">${listaProdutos[i].preco}</td>
+                <td style="border: 1px solid black">${listaProdutos[i].estoque}</td>
+                <td style="border: 1px solid black">${listaProdutos[i].linkImagem}</td>
+                <td style="border: 1px solid black">${listaProdutos[i].categoria}</td>
+                <td style="border: 1px solid black">${listaProdutos[i].fornecedor}</td>
+                <td style="border: 1px solid black"><button id="exclusaobutton" onclick="deleteProdutos('${listaProdutos[i].id}')">Excluir</button></td>
             `;
             tbody.appendChild(tr);
         }
@@ -67,7 +67,7 @@ function exibirTabela () {
     }
 }
 
-function getClientes () {
+function getProdutos () {
     fetch(urlBase, {
         method: "GET"
     })
@@ -75,39 +75,39 @@ function getClientes () {
         if (resposta.ok)
             return resposta.json();
     })
-    .then((clientes) => {
-        listaClientes = clientes;
+    .then((produtos) => {
+        listaProdutos = produtos;
         exibirTabela();
     })
     .catch((erro) => {
-        alert("Erro ao tentar recuperar clientes do servidor.");
+        alert("Erro ao tentar recuperar produtos do servidor.");
     });
 }
 
-function postCliente (cliente) {
+function postProdutos (produtos) {
     fetch(urlBase, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(cliente)
+        body: JSON.stringify(produtos)
     })
     .then((resposta) => {
         if (resposta.ok)
             return resposta.json();
     })
     .then((dados) => {
-        alert(`Cliente cadastrado com sucesso. ID do cliente: ${dados.id}`);
-        listaClientes.push(cliente);
+        alert(`Produtos cadastrado com sucesso. ID do produtos: ${dados.id}`);
+        listaProdutos.push(produtos);
         exibirTabela();
     })
     .catch((erro) => {
-        alert("Erro ao cadastrar cliente: " + erro);
+        alert("Erro ao cadastrar produtos: " + erro);
     });
 }
 
-function deleteCliente (id) {
-    if (confirm("Deseja realmente excluir o cliente " + id + "?")) {
+function deleteProdutos (id) {
+    if (confirm("Deseja realmente excluir o produtos " + id + "?")) {
         fetch(urlBase + "/" + id, {
             method: "DELETE"
         })
@@ -116,16 +116,16 @@ function deleteCliente (id) {
                 return resposta.json();
         })
         .then((dados) => {
-            alert("Cliente excluído com sucesso.");
-            listaClientes = listaClientes.filter((cliente) => {
-                return cliente.id != id;
+            alert("Produtos excluído com sucesso.");
+            listaProdutos = listaProdutos.filter((produtos) => {
+                return produtos.id != id;
             });
             document.getElementById(id)?.remove();
         })
         .catch((erro) => {
-            alert("Erro ao excluir cliente: " + erro);
+            alert("Erro ao excluir produtos: " + erro);
         });
     }
 }
 
-getClientes();
+getProdutos();

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/cadastros.css">
+    <title>Cadastro de Produtos</title>
+</head>
+<body>
+    <form id="formcadprodutos" action="#" method="POST">
+        <h1>Cadastro de Produtos</h1>
+        <div id="divinputs">
+            <section id="sectioninp">
+                <div id="inputdiv">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div id="inputdiv">
+                    <label for="preco">Preço:</label>
+                    <input type="text" id="preco" required>
+                </div>
+                <div id="inputdiv">
+                    <label for="estoque">Estoque:</label>
+                    <input type="text" id="estoque" required>
+                </div>
+            </section>
+            <section id="sectioninp">
+                <div id="inputdiv">
+                    <label for="linkImagem">Link Imagem:</label>
+                    <input type="text" id="linkImagem" required>
+                </div>
+                <div id="inputdiv">
+                    <label for="categoria">Categoria:</label>
+                    <input type="text" id="categoria" required>
+                </div>
+                <div id="inputdiv">
+                    <label for="fornecedor">Fornecedor:</label>
+                    <input type="text" id="fornecedor" required>
+                </div>
+            </section>
+        </div>
+        <div id="divbuttons">
+            <button type="submit">Cadastrar</button>
+            <a href="/menu.html">Voltar</a>
+        </div>
+    </form>
+    <div id="tabela"></div>
+</body>
+<script src="/js/produtos.js"></script>
+</html>

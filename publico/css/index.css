@@ -50,3 +50,26 @@ h1 {
     gap: 20px;
     padding: 30px;
 }
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .produto-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd;
+    background-color: #fff;
+  }
+  
+  .produto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }

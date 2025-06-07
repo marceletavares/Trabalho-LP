@@ -48,8 +48,8 @@
       "preco": 79.9,
       "estoque": 120,
       "linkimagem": "https://inspiringfans4takes.vteximg.com.br/arquivos/ids/196769-1000-1000/88549_024_60535-024_CAMISA-POLO-CLASSIC-BRANCO-MASCULINO-FIATWEAR-FIAT-60535-1.jpg?v=638622821611500000",
-      "categoria_id": "1",
-      "fornecedor_id": "1"
+      "categoria": "Roupas",
+      "fornecedor": "Fiatwear"
     },
     {
       "id": "2",
@@ -57,8 +57,8 @@
       "preco": 2999,
       "estoque": 30,
       "linkimagem": "https://fujiokadistribuidor.vteximg.com.br/arquivos/ids/312551-1000-1000/p_55212_alta_1.png?v=638228687674530000",
-      "categoria_id": "2",
-      "fornecedor_id": "2"
+      "categoria": "Informática",
+      "fornecedor": "Lenovo"
     },
     {
       "id": "3",
@@ -66,8 +66,8 @@
       "preco": 199.9,
       "estoque": 55,
       "linkimagem": "https://a-static.mlcdn.com.br/800x560/cafeteira-filtro-arno-preferita-inox-750ml-com-jarra-de-vidro-cfpf/magazineluiza/226523600/9e209005bfa4cf769ab87703e2ecbe45.jpg",
-      "categoria_id": "3",
-      "fornecedor_id": "3"
+      "categoria": "Eletrodomésticos",
+      "fornecedor": "Arno"
     },
     {
       "id": "4",
@@ -75,8 +75,8 @@
       "preco": 3599.99,
       "estoque": 45,
       "linkimagem": "https://trocafone.vtexassets.com/arquivos/ids/347712-800-auto?v=638519158414070000&width=800&height=auto&aspect=true",
-      "categoria_id": "2",
-      "fornecedor_id": "4"
+      "categoria": "Telefonia",
+      "fornecedor": "Samsung"
     },
     {
       "id": "5",
@@ -84,8 +84,8 @@
       "preco": 299.9,
       "estoque": 80,
       "linkimagem": "https://m.media-amazon.com/images/I/51olNZRjn+L.jpg",
-      "categoria_id": "4",
-      "fornecedor_id": "5"
+      "categoria": "Áudio",
+      "fornecedor": "JBL"
     },
     {
       "id": "6",
@@ -93,8 +93,8 @@
       "preco": 499.9,
       "estoque": 60,
       "linkimagem": "https://imgnike-a.akamaihd.net/1300x1300/027322IDA8.jpg",
-      "categoria_id": "1",
-      "fornecedor_id": "6"
+      "categoria": "Calçados",
+      "fornecedor": "Nike"
     },
     {
       "id": "7",
@@ -102,8 +102,8 @@
       "preco": 450,
       "estoque": 40,
       "linkimagem": "https://i.zst.com.br/thumbs/12/35/35/8753948.jpg",
-      "categoria_id": "3",
-      "fornecedor_id": "3"
+      "categoria": "Eletrodomésticos",
+      "fornecedor": "Panasonic"
     },
     {
       "id": "8",
@@ -111,8 +111,8 @@
       "preco": 599,
       "estoque": 70,
       "linkimagem": "https://mirandacomputacao.jetassets.com.br/produto/47856-principal.png",
-      "categoria_id": "4",
-      "fornecedor_id": "7"
+      "categoria": "Wearables",
+      "fornecedor": "Xiaomi"
     },
     {
       "id": "9",
@@ -120,8 +120,8 @@
       "preco": 89.9,
       "estoque": 100,
       "linkimagem": "https://images.tcdn.com.br/img/img_prod/1094240/blusa_feminina_100_algodao_599_3_f79c0551d104745829ea72b191077bf8.png",
-      "categoria_id": "1",
-      "fornecedor_id": "1"
+      "categoria": "Roupas",
+      "fornecedor": "CottonStyle"
     },
     {
       "id": "10",
@@ -129,8 +129,8 @@
       "preco": 799.9,
       "estoque": 25,
       "linkimagem": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/t/g/tgt-hr-rgb0154124.jpg",
-      "categoria_id": "5",
-      "fornecedor_id": "8"
+      "categoria": "Móveis",
+      "fornecedor": "Pichau"
     },
     {
       "id": "11",
@@ -138,8 +138,8 @@
       "preco": 399.9,
       "estoque": 50,
       "linkimagem": "https://fujiokadistribuidor.vteximg.com.br/arquivos/ids/181620",
-      "categoria_id": "4",
-      "fornecedor_id": "5"
+      "categoria": "Áudio",
+      "fornecedor": "JBL"
     },
     {
       "id": "12",
@@ -147,8 +147,8 @@
       "preco": 259.9,
       "estoque": 75,
       "linkimagem": "https://jansport.vteximg.com.br/arquivos/ids/160186-400-533/4QUT003-1.jpg?v=637430356020400000",
-      "categoria_id": "6",
-      "fornecedor_id": "9"
+      "categoria": "Acessórios",
+      "fornecedor": "Jansport"
     }
   ],
   "fornecedores": [

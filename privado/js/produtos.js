@@ -11,7 +11,7 @@ function manipularSubmissao (evento) {
         const linkImagem = document.getElementById("linkImagem").value;
         const categoria = document.getElementById("categoria").value;
         const fornecedor = document.getElementById("fornecedor").value;
-        const produto = {nome, preco, estoque, linkImagem, categoria, fornecedor};
+        const produto = {nome, preco, estoque,linkImagem, categoria, fornecedor};
         postProduto(produto);
         form.reset();
         exibirTabela();
@@ -39,7 +39,6 @@ function exibirTabela () {
                 <th style="border: 1px solid black">Nome</th>
                 <th style="border: 1px solid black">Preço</th>
                 <th style="border: 1px solid black">Estoque</th>
-                <th style="border: 1px solid black">Link Imagem</th>
                 <th style="border: 1px solid black">Categoria</th>
                 <th style="border: 1px solid black">Fornecedor</th>
             </tr>
@@ -52,7 +51,6 @@ function exibirTabela () {
                 <td style="border: 1px solid black">${listaProdutos[i].nome}</td>
                 <td style="border: 1px solid black">${listaProdutos[i].preco}</td>
                 <td style="border: 1px solid black">${listaProdutos[i].estoque}</td>
-                <td style="border: 1px solid black">${listaProdutos[i].linkImagem}</td>
                 <td style="border: 1px solid black">${listaProdutos[i].categoria}</td>
                 <td style="border: 1px solid black">${listaProdutos[i].fornecedor}</td>
                 <td style="border: 1px solid black"><button id="exclusaobutton" onclick="deleteProduto('${listaProdutos[i].id}')">Excluir</button></td>

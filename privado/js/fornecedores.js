@@ -11,7 +11,7 @@ function manipularSubmissao (evento) {
         const cidade = document.getElementById("cidade").value;
         const estado = document.getElementById("estado").value;
         const fornecedor = {nome, cnpj, telefone, cidade, estado};
-        postfornecedor(fornecedor);
+        postFornecedor(fornecedor);
         form.reset();
         exibirTabela();
     }
@@ -95,6 +95,7 @@ function postFornecedor (fornecedor) {
     })
     .then((dados) => {
         alert(`Fornecedor cadastrado com sucesso. ID do fornecedor: ${dados.id}`);
+        fornecedor.id = dados.id;
         listaFornecedores.push(fornecedor);
         exibirTabela();
     })

@@ -45,27 +45,27 @@
     {
       "id": "1",
       "nome": "Camiseta Polo Masculina",
-      "preco": 79.90,
+      "preco": 79.9,
       "estoque": 120,
-      "linkimagem":"https://inspiringfans4takes.vteximg.com.br/arquivos/ids/196769-1000-1000/88549_024_60535-024_CAMISA-POLO-CLASSIC-BRANCO-MASCULINO-FIATWEAR-FIAT-60535-1.jpg?v=638622821611500000",
+      "linkimagem": "https://inspiringfans4takes.vteximg.com.br/arquivos/ids/196769-1000-1000/88549_024_60535-024_CAMISA-POLO-CLASSIC-BRANCO-MASCULINO-FIATWEAR-FIAT-60535-1.jpg?v=638622821611500000",
       "categoria_id": "1",
       "fornecedor_id": "1"
     },
     {
       "id": "2",
       "nome": "Notebook Lenovo Ideapad 3",
-      "preco": 2999.00,
+      "preco": 2999,
       "estoque": 30,
-      "linkimagem":"https://fujiokadistribuidor.vteximg.com.br/arquivos/ids/312551-1000-1000/p_55212_alta_1.png?v=638228687674530000",
+      "linkimagem": "https://fujiokadistribuidor.vteximg.com.br/arquivos/ids/312551-1000-1000/p_55212_alta_1.png?v=638228687674530000",
       "categoria_id": "2",
       "fornecedor_id": "2"
     },
     {
       "id": "3",
       "nome": "Cafeteira Elétrica Arno",
-      "preco": 199.90,
+      "preco": 199.9,
       "estoque": 55,
-      "linkimagem":"https://a-static.mlcdn.com.br/800x560/cafeteira-filtro-arno-preferita-inox-750ml-com-jarra-de-vidro-cfpf/magazineluiza/226523600/9e209005bfa4cf769ab87703e2ecbe45.jpg",
+      "linkimagem": "https://a-static.mlcdn.com.br/800x560/cafeteira-filtro-arno-preferita-inox-750ml-com-jarra-de-vidro-cfpf/magazineluiza/226523600/9e209005bfa4cf769ab87703e2ecbe45.jpg",
       "categoria_id": "3",
       "fornecedor_id": "3"
     },
@@ -81,7 +81,7 @@
     {
       "id": "5",
       "nome": "Fone de Ouvido Bluetooth JBL",
-      "preco": 299.90,
+      "preco": 299.9,
       "estoque": 80,
       "linkimagem": "https://m.media-amazon.com/images/I/51olNZRjn+L.jpg",
       "categoria_id": "4",
@@ -90,7 +90,7 @@
     {
       "id": "6",
       "nome": "Tênis Esportivo Nike Air Max",
-      "preco": 499.90,
+      "preco": 499.9,
       "estoque": 60,
       "linkimagem": "https://imgnike-a.akamaihd.net/1300x1300/027322IDA8.jpg",
       "categoria_id": "1",
@@ -99,7 +99,7 @@
     {
       "id": "7",
       "nome": "Micro-ondas Panasonic 20L",
-      "preco": 450.00,
+      "preco": 450,
       "estoque": 40,
       "linkimagem": "https://i.zst.com.br/thumbs/12/35/35/8753948.jpg",
       "categoria_id": "3",
@@ -108,7 +108,7 @@
     {
       "id": "8",
       "nome": "Relógio Smartwatch Xiaomi",
-      "preco": 599.00,
+      "preco": 599,
       "estoque": 70,
       "linkimagem": "https://mirandacomputacao.jetassets.com.br/produto/47856-principal.png",
       "categoria_id": "4",
@@ -117,7 +117,7 @@
     {
       "id": "9",
       "nome": "Blusa Feminina de Algodão",
-      "preco": 89.90,
+      "preco": 89.9,
       "estoque": 100,
       "linkimagem": "https://images.tcdn.com.br/img/img_prod/1094240/blusa_feminina_100_algodao_599_3_f79c0551d104745829ea72b191077bf8.png",
       "categoria_id": "1",
@@ -126,7 +126,7 @@
     {
       "id": "10",
       "nome": "Cadeira Gamer RGB",
-      "preco": 799.90,
+      "preco": 799.9,
       "estoque": 25,
       "linkimagem": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/t/g/tgt-hr-rgb0154124.jpg",
       "categoria_id": "5",
@@ -135,7 +135,7 @@
     {
       "id": "11",
       "nome": "Caixa de Som Bluetooth JBL Flip 5",
-      "preco": 399.90,
+      "preco": 399.9,
       "estoque": 50,
       "linkimagem": "https://fujiokadistribuidor.vteximg.com.br/arquivos/ids/181620",
       "categoria_id": "4",
@@ -144,7 +144,7 @@
     {
       "id": "12",
       "nome": "Mochila Escolar Jansport",
-      "preco": 259.90,
+      "preco": 259.9,
       "estoque": 75,
       "linkimagem": "https://jansport.vteximg.com.br/arquivos/ids/160186-400-533/4QUT003-1.jpg?v=637430356020400000",
       "categoria_id": "6",
@@ -209,21 +209,21 @@
       "nome": "Roupas",
       "descricao": "Vestuário masculino, feminino e infantil.",
       "faixaEtaria": "Adulto e Infantil",
-      "departamento":"Moda"
+      "departamento": "Moda"
     },
     {
       "id": "2",
       "nome": "Informática",
       "descricao": "Produtos de tecnologia como computadores e acessórios.",
       "faixaEtaria": "Adulto",
-      "departamento":"Tecnologia"
+      "departamento": "Tecnologia"
     },
     {
       "id": "3",
       "nome": "Eletrodomésticos",
       "descricao": "Aparelhos para casa como geladeiras, fogões e micro-ondas.",
       "faixaEtaria": "Adulto",
-      "departamento":"Casa"
+      "departamento": "Casa"
     }
   ],
   "usuarios": [

@@ -8,10 +8,10 @@ function manipularSubmissao (evento) {
         const nome = document.getElementById("nome").value;
         const preco = document.getElementById("preco").value;
         const estoque = document.getElementById("estoque").value;
-        const linkimagem = document.getElementById("linkimagem").value;
+        const linkImagem = document.getElementById("linkImagem").value;
         const categoria = document.getElementById("categoria").value;
         const fornecedor = document.getElementById("fornecedor").value;
-        const produto = {nome, preco, estoque, linkimagem, categoria, fornecedor};
+        const produto = {nome, preco, estoque, linkImagem, categoria, fornecedor};
         postProdutos(produto);
         form.reset();
         exibirTabela();
@@ -19,7 +19,6 @@ function manipularSubmissao (evento) {
     evento.preventDefault();
     evento.stopPropagation();
 }
-
 function exibirTabela () {
     const divt = document.getElementById("tabela");
     divt.innerHTML = "";
@@ -84,7 +83,7 @@ function getProdutos () {
     });
 }
 
-function postProdutos (produtos) {
+function postProduto (produtos) {
     fetch(urlBase, {
         method: "POST",
         headers: {
@@ -98,6 +97,7 @@ function postProdutos (produtos) {
     })
     .then((dados) => {
         alert(`Produtos cadastrado com sucesso. ID do produtos: ${dados.id}`);
+        produto.id = dados.id;
         listaProdutos.push(produtos);
         exibirTabela();
     })
@@ -106,7 +106,7 @@ function postProdutos (produtos) {
     });
 }
 
-function deleteProdutos (id) {
+function deleteProduto (id) {
     if (confirm("Deseja realmente excluir o produtos " + id + "?")) {
         fetch(urlBase + "/" + id, {
             method: "DELETE"
@@ -116,7 +116,7 @@ function deleteProdutos (id) {
                 return resposta.json();
         })
         .then((dados) => {
-            alert("Produtos excluído com sucesso.");
+            alert("Produto excluído com sucesso.");
             listaProdutos = listaProdutos.filter((produtos) => {
                 return produtos.id != id;
             });

@@ -24,7 +24,7 @@ function exibirTabela () {
     divt.innerHTML = "";
 
     if (listaEntregadores.length == 0)
-        divt.innerHTML = "<p>Não há entregadors cadastrados.</p>";
+        divt.innerHTML = "<p>Não há entregadores cadastrados.</p>";
     else {
         const table = document.createElement("table");
         const thead = document.createElement("thead");
@@ -43,7 +43,6 @@ function exibirTabela () {
                 <th style="border: 1px solid black">Modelo Veiculo</th>
             </tr>
         `;
-
         for (let i = 0; i < listaEntregadores.length; i++) {
             const tr = document.createElement("tr");
             tr.id = listaEntregadores[i].id;
@@ -95,6 +94,7 @@ function postEntregador (entregador) {
     })
     .then((dados) => {
         alert(`Entregador cadastrado com sucesso. ID do entregador: ${dados.id}`);
+        entregador.id = dados.id;
         listaEntregadores.push(entregador);
         exibirTabela();
     })
